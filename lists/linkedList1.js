@@ -76,6 +76,23 @@ class LinkedList {
     }
     return currentNode
   }
+
+  reverse() {
+    let first = this.head
+    this.tail = this.head
+    let second = first.next
+
+    while(second) {
+      const temp = second.next
+      second.next = first
+      first = second
+      second = temp
+    }
+
+    this.head.next = null
+    this.head = first
+    return this.listValues()
+  }
 }
 
 const myLinkedList = new LinkedList(10);
