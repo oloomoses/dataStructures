@@ -1,6 +1,6 @@
 const numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
 
-function insertionSort(array) {
+function selectionSort(array) {
   for(let i = 0; i < array.length; i++) {
     let min = i;
     let temp = array[i]
@@ -16,5 +16,5 @@ function insertionSort(array) {
 
 }
 
-insertionSort(numbers);
+selectionSort(numbers);
 console.log(numbers);
